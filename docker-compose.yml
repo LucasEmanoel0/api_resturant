@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: itachi
+      POSTGRES_PASSWORD: itachi007
+      POSTGRES_DB: ApiiRestaurant
+    ports:
+      - "5432:5432"
