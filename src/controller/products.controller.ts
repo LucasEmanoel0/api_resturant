@@ -2,7 +2,7 @@ import express from "express";
 import { db} from "../../drizzle/index.ts";
 import { productsTable } from "../../drizzle/src/db/products.ts";
 import * as z from "zod"; 
-import { asc, eq, ilike } from "drizzle-orm";
+import { asc, eq} from "drizzle-orm";
 
  
 
@@ -19,6 +19,7 @@ export default class ProductController{
             const users = await db.select().from(productsTable).orderBy(asc(productsTable.name));
             response.json({users})
         } catch (error) {
+            next(error)
             
         }
        
