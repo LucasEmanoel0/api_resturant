@@ -19,4 +19,20 @@ export default class TableController{
         }
 
     }
+
+    async create(req:Request,res:Response,next:NextFunction){
+
+        try {
+
+            const bodyschema = z.object({
+            tableNumber:z.number().positive()
+        })
+        const {tableNumber} = bodyschema.parse(req.body)
+            const tables = await db.insert(tableTable).values({tableNumber}).returning()
+             return res.json({message:"table created", tables})
+        } catch (error) {
+            next(error)
+        }
+
+    }
 }
