@@ -36,6 +36,20 @@
       "when": 1759110987626,
       "tag": "0004_boring_marten_broadcloak",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1759123120650,
+      "tag": "0005_wild_thena",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1759123250474,
+      "tag": "0006_cooing_aaron_stack",
+      "breakpoints": true
     }
   ]
 }
